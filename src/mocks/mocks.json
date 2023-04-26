@@ -1,0 +1,53 @@
+{
+  "reload": {},
+  "job": [{
+    "id": 1,
+    "name": "job 1",
+    "host": "wutwut.com",
+    "frequnecy": "15m",
+    "verbose": "1",
+    "teamsUrl": "something",
+    "teamsRoomName": "somethingelse",
+    "offset": "00:00",
+    "condition": ">",
+    "history": null
+  }],
+  "jobs": [
+    {
+      "id": 1,
+      "name": "job 1",
+      "host": "wutwut.com",
+      "frequnecy": "15m",
+      "verbose": "1",
+      "teamsUrl": "something",
+      "teamsRoomName": "somethingelse",
+      "offset": "00:00",
+      "condition": ">",
+      "history": null
+    },
+    {
+      "id": 2,
+      "name": "job 2",
+      "host": "sssss.com",
+      "frequnecy": "60m",
+      "verbose": "1",
+      "teamsUrl": "something",
+      "teamsRoomName": "somethingelse",
+      "offset": "00:00",
+      "condition": ">",
+      "history": null
+    },
+    {
+      "id": 3,
+      "name": "job 3",
+      "host": "sssss.com",
+      "frequnecy": "60m",
+      "verbose": "1",
+      "teamsUrl": "something",
+      "teamsRoomName": "somethingelse",
+      "offset": "00:00",
+      "condition": ">",
+      "history": null
+    }
+  ]
+}
