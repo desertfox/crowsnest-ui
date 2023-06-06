@@ -8,8 +8,6 @@ RUN npm install .
 
 RUN npm run build
 
-RUN mkdir -p /build
-
 FROM scratch
 
 COPY --from=build /tmp/build /build
