@@ -9,9 +9,9 @@ const History = ({ records }) => {
       <ul>
         {records.results.map((result) => (
           <li key={result.When} >
-            <p>Count: {result.count}</p>
-            <p>When: {result.when}</p>
-            <p>Alert: {result.alert ? "True" : "False"}</p>
+            <p>Count: {result.Count}</p>
+            <p>When: {result.When}</p>
+            <p>Alert: {result.Alert ? "True" : "False"}</p>
           </li>
         ))}
       </ul>
