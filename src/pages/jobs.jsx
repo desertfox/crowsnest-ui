@@ -54,11 +54,11 @@ export default function Jobs() {
 
 
   return (
-    <Grid conatiner>
-      <Grid item>
+    <Grid>
+      <Grid>
         <Typography variant="h3">Job List</Typography>
       </Grid>
-      <Grid item>
+      <Grid>
         <ul className="crowsnest-job-list">
           {jobList ? (
             jobList.map((job) => {
