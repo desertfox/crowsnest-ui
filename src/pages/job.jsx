@@ -32,7 +32,7 @@ const Job = () => {
               <ul>
                 <li>Stream ID: {jobData.search.Streamid}</li>
                 <li>Query: {jobData.search.Query}</li>
-                <li>Fields: {Array.isArray(jobData.search.Fields) ?  jobData.search.Fields.length > 0 ? jobData.search.fields.join(", ") : "" : ""}</li>
+                <li>Fields: {Array.isArray(jobData.search.Fields) && jobData.search.Fields.length > 0 ? jobData.search.Fields.join(", ") : "" }</li>
               </ul>
               <p>Condition:</p>
               <ul>
