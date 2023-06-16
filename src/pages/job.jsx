@@ -24,20 +24,20 @@ const Job = () => {
               <p>Verbose: {jobData.verbose ? "Yes" : "No"}</p>
               <p>Teams:</p>
               <ul>
-                <li>Name: {jobData.teams.name}</li>
-                <li>URL: {jobData.teams.url}</li>
+                <li>Name: {jobData.teams.Name}</li>
+                <li>URL: {jobData.teams.Url}</li>
               </ul>
               <p>Offset: {jobData.offset}</p>
               <p>Search:</p>
               <ul>
-                <li>Stream ID: {jobData.search.streamid}</li>
-                <li>Query: {jobData.search.query}</li>
-                <li>Fields: {Array.isArray(jobData.search.fields) ? jobData.search.fields.join(", ") : null}</li>
+                <li>Stream ID: {jobData.search.Streamid}</li>
+                <li>Query: {jobData.search.Query}</li>
+                <li>Fields: {Array.isArray(jobData.search.Fields) ? jobData.search.fields.join(", ") : null}</li>
               </ul>
               <p>Condition:</p>
               <ul>
-                <li>Threshold: {jobData.condition.threshold}</li>
-                <li>Operator: {jobData.condition.operator}</li>
+                <li>Threshold: {jobData.condition.Threshold}</li>
+                <li>Operator: {jobData.condition.Operator}</li>
               </ul>
               <Link to={`/job/${jobData.id}/edit`} state={jobData}><h3>Edit</h3></Link>
 
