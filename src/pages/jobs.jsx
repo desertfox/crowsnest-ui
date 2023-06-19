@@ -9,22 +9,33 @@ export default function Jobs() {
   const [jobList, setJobList] = useState([
     new JobDetails("1", "name", "host", "15m", 1,
       {
-        "name": "name1", "url": "url1"
+        "Name": "name1", "Url": "url1"
       },
       '00:00',
       {
-        "streamid": "55555",
-        "query": "error",
-        "fields": ["SOURCE"],
+        "Streamid": "55555",
+        "Query": "error",
+        "Fields": ["SOURCE"],
       }, {
-      "threshold": "1",
-      "operator": ">",
+      "Threshold": "1",
+      "Operator": ">",
       }, {
+        "alertCount": 1,
         "results": [
           {
-            "count": 1,
-            "when": '12:00',
-            "alert": "false",
+            "Count": 1,
+            "When": Date(2023, 5, 2, 10, 0, 0),
+            "Alert": false,
+          },
+          {
+            "Count": 2,
+            "When": Date(2023, 5, 2, 11, 0, 0),
+            "Alert": true,
+          },
+          {
+            "Count": 5,
+            "When": Date(2023, 5, 2, 12, 0, 0),
+            "Alert": true,
           }
         ]
       }

@@ -10,11 +10,11 @@ const Job = () => {
   console.log(jobData);
 
   return (
-    <Grid container xs={12}>
-      <Grid item xs={12}>
+    <Grid>
+      <Grid >
       <Typography variant="h3">Job Details</Typography>
       </Grid>
-      <Grid item>
+      <Grid>
         <Card>
           {jobData ? (
             <div className="job-data-display">
