@@ -3,7 +3,7 @@ import List from '@mui/joy/List';
 import ListItem from '@mui/joy/ListItem';
 
 import React from "react";
-import LineGraph from "./graph";
+import LineGraph from "./graph.jsx";
 
 const History = ({ records }) => {
   return (
