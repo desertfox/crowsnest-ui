@@ -35,7 +35,7 @@ export default function Dashboard() {
           </Card>
           <Card variant="outlined" sx={{ mt: 4, mb: 2 }}>
             <Typography variant="h1" sx={{ mb: 2 }}>Jobs Running {status ? status.numJobs : "??"}</Typography>
-            <Typography variant="h1" sx={{ mb: 2 }}>Alerts {status ? status.numJobs : "??"}</Typography>
+            <Typography variant="h1" sx={{ mb: 2 }}>Alerts {status ? status.numAlerts : "??"}</Typography>
           </Card>
         </Grid>
         : null}
