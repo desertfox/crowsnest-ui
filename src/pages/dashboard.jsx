@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import { Grid, Typography, Card } from '@mui/material';
 
-import ReloadButton from "../components/reloadbutton.jsx";
 import ElapsedTime from "../components/elapsedtime.jsx";
 
 import api from "../service/api.js";
@@ -17,6 +16,7 @@ export default function Dashboard() {
       setStatus({
         startTime: new Date(response.startTime.replace(/CDT/g, "")),
         numJobs: response.numJobs,
+        numAlerts: response.numAlerts
       });
     };
 
@@ -28,15 +28,17 @@ export default function Dashboard() {
       <Grid item xs={12}>
         <Typography variant="h3">Dashboard</Typography>
       </Grid>
-      <Grid item>
-        <Card variant="outlined">
-          <Typography variant="h1">Uptime {status ? <ElapsedTime date={status.startTime} /> : "00:00:00"}</Typography>
-        </Card>
-        <Card variant="outlined" sx={{ mt: 4, mb: 2 }}>
-          <Typography variant="h1" sx={{ mb: 2 }}>Jobs Running {status ? status.numJobs : "??"}</Typography>
-          <ReloadButton />
-        </Card>
-      </Grid>
+      {status ?
+        <Grid item>
+          <Card variant="outlined">
+            <Typography variant="h1">Uptime {status ? <ElapsedTime date={status.startTime} /> : "00:00:00"}</Typography>
+          </Card>
+          <Card variant="outlined" sx={{ mt: 4, mb: 2 }}>
+            <Typography variant="h1" sx={{ mb: 2 }}>Jobs Running {status ? status.numJobs : "??"}</Typography>
+            <Typography variant="h1" sx={{ mb: 2 }}>Alerts {status ? status.numJobs : "??"}</Typography>
+          </Card>
+        </Grid>
+        : null}
     </Grid>
   );
 }
